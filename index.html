@@ -230,7 +230,10 @@ OPERATIONS.forEach((op, idx) => {
   btn.onclick = () => { selectOperation(funcName); highlightButton(btn); }
   opsGrid.appendChild(btn);
 });
-
+/* keep track of active button appearance */
+function highlightButton(activeBtn){
+  Array.from(opsGrid.children).forEach(b => b.classList.remove('active'));
+  activeBtn.classList.add('active');
 
 }
 
